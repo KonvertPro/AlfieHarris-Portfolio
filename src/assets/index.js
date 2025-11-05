@@ -44,7 +44,6 @@ import mack from "./mack.jpeg";
 import waitrose from"./waitroselogo.png";
 import dubmantra from"./dubmantra.jpeg";
 import datametrics from"./Datametrics.png";
-import datametricsvid from"./datametricsvid.mp4";
 import eligibility from"./eligibility.png";
 import indravisualiser from"./indravisualiser.png";
 import harisu from"./harisu.png";
@@ -94,7 +93,6 @@ export {
   dubmantra,
   indra,
   datametrics,
-  datametricsvid,
   eligibility,
   indravisualiser,
   harisu,
