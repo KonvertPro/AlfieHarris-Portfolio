@@ -45,18 +45,17 @@ const About = () => {
     <>  
     <motion.div variants={textVariant()}>
       <p className={styles.sectionSubText}>Introduction</p>
-      <h2 className={styles.sectionHeadText}>Overview.</h2>
+      <h2 className={styles.sectionHeadText}>Overview</h2>
     </motion.div>
 
     <motion.p
     variants={fadeIn("","",0.1,1)}
     className="mt-4 text-secondary text-[17px] max-w-3xl 
     leading-[30px]">
-     I’m a talented, creative, and ambitious design graduate
-     with a strong foundation in software development and multimedia applications.
-     Throughout my studies, I was able to gain useful practical experience of deploying 
-     these technologies and I’m now looking for the opportunity to showcase and further 
-     develop my skills and experience in a business environment.
+      I'm a skilled web developer with experience in
+      creating dynamic and responsive websites using software such as Framer, 
+      and libraries such as React.js and Three.js. I also specialise in creating audio visual
+      solutions, either custom coded made within TouchDesigner.
 
     </motion.p>
 

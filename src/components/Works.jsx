@@ -26,11 +26,22 @@ const ProjectCard = ({
     className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
     >
    <div className="relative w-full h-[230px]">
-  <img 
-  src={image}
-  alt={name}
-  className="w-full h-full object-cover rounder-2xl" 
-     />
+  {typeof image === "string" && image.endsWith(".mp4") ? (
+    <video
+      src={image}
+      autoPlay
+      muted
+      loop
+      playsInline
+      className="w-full h-full object-cover rounded-2xl"
+    />
+  ) : (
+    <img
+      src={image}
+      alt={name}
+      className="w-full h-full object-cover rounded-2xl"
+    />
+  )}
      <div className="absolute inset-0 flex justify-end 
      m-3 card-img_hover">
       <div
@@ -70,10 +81,10 @@ const Works =() => {
     <>
      <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText}`}>
-          My Previous Work.
+          My Previous Work
         </p>
         <h2 className={`${styles.sectionHeadText} `}>
-          Projects.
+          Projects
         </h2>
       </motion.div>
       <div className="w-full flex">
@@ -81,11 +92,10 @@ const Works =() => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-3 text-secondary text-[17px] 
         max-w-3xl leading-[30px]"
-        >
-          The following projects showcase my skills and experience 
-          through examples of my work. Each project is briefly described
-          with links to code repos and live demos. All of my code repos can be
-          found at: <a 
+        >Below is a collection of projects that demonstrate my ability to design and develop purposeful digital experiences.
+         Each piece highlights a different aspect of my skill set — from clean, responsive interfaces to functional, user-centred builds. 
+         You can view the live demos and explore the source code for each, or browse all my repositories on GitHub.
+          <a 
           href="https://github.com/AlfieHarris10" target="_blank">github.com/AlfieHarris10</a>
         </motion.p> 
       </div>

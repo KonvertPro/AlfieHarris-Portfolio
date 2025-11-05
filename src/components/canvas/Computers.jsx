@@ -1,10 +1,10 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense, useEffect, useMemo, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile }) => {
+const Computers = ({ config }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
   return (
@@ -21,8 +21,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+        scale={config.scale}
+        position={config.position}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -30,30 +30,52 @@ const Computers = ({ isMobile }) => {
 };
 
 const ComputersCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [bp, setBp] = useState("lg");
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    const mqXs = window.matchMedia("(max-width: 360px)");
+    const mqSm = window.matchMedia("(max-width: 480px)");
+    const mqMd = window.matchMedia("(max-width: 640px)");
 
-    setIsMobile(mediaQuery.matches);
-
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
+    const update = () => {
+      if (mqXs.matches) return setBp("xs");
+      if (mqSm.matches) return setBp("sm");
+      if (mqMd.matches) return setBp("md");
+      return setBp("lg");
     };
 
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    update();
+
+    mqXs.addEventListener("change", update);
+    mqSm.addEventListener("change", update);
+    mqMd.addEventListener("change", update);
 
     return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+      mqXs.removeEventListener("change", update);
+      mqSm.removeEventListener("change", update);
+      mqMd.removeEventListener("change", update);
     };
   }, []);
+
+  const config = useMemo(() => {
+    switch (bp) {
+      case "xs":
+        return { scale: 0.55, position: [0, -3.2, -1.9], fov: 30 };
+      case "sm":
+        return { scale: 0.6, position: [0, -3.15, -1.85], fov: 28 };
+      case "md":
+        return { scale: 0.68, position: [0, -3.1, -1.7], fov: 26 };
+      default:
+        return { scale: 0.75, position: [0, -3.25, -1.5], fov: 25 };
+    }
+  }, [bp]);
 
   return (
     <Canvas
       frameloop='demand'
       shadows
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{ position: [20, 3, 5], fov: config.fov }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
@@ -62,7 +84,7 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile} />
+        <Computers config={config} />
       </Suspense>
 
       <Preload all />

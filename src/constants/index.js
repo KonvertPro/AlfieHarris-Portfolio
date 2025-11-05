@@ -35,6 +35,12 @@ import {
     mack,
     waitrose,
     dubmantra,
+    indra,
+    datametrics,
+    datametricsvid,
+    eligibility,
+    indravisualiser,
+    harisu,
   } from "../assets";
   
   export const navLinks = [
@@ -58,7 +64,7 @@ import {
       icon: web,
     },
     {
-      title: "Social Media Manager",
+      title: "AV Developer",
       icon: mobile,
     },
     {
@@ -115,7 +121,7 @@ import {
     {
       name: "tdlogo",
       icon: tdlogo,
-    }
+    },
   ];
   
   const experiences = [
@@ -159,16 +165,16 @@ import {
     },
     
     {
-      title: "Core Group Member",
+      title: "Digital Content Creator",
       company_name: "Dub Mantra",
       icon: dubmantra,
       iconBg: "#000000",
       date: "Nov 2023 - Present",
       points: [
         "Dub Mantra is a music group/label that offers a platform for creatives and audiences to collaborate and connect both online and at live events.",
-        "Collaborate with other core members to design and create digital content for the brand's social media.",
-        "I play a role in organising and marketing our own live events across the South West of England",
-        "A resident DJ with experience playing live in Bristol, UK and Hokkaido, Japan.",
+        "I collaborate with the team to design and create digital content for the brand's social media.",
+        "I play a role in organising and marketing our own live events across the UK",
+        "A resident DJ with experience playing live across the world, from the UK to Europe and Asia.",
       ],
     },
 
@@ -190,14 +196,14 @@ import {
   const testimonials = [
     {
       testimonial:
-      "After founding Konvert, Alfie was my first choice to help run the business due to his creative ideas and consistent work ethic.",
+      "Alfie and I have been working side by side for over a year now on various projects. We collaborate well together and he is always eager to learn new skills.",
       name: "Mack Gorman",
       designation: "Founder",
       company: "Konvert",
-      image: "https://github.com/AlfieHarris10/AlfieHarris-Portfolio/blob/main/mack.jpeg",
+      image: mack,
     },
     {
-      testimonial: "Alfie created branding guidelines for my business. He took everything that I wanted and produced some great results. ",
+      testimonial: "Alfie turned our vague ideas into a clean, conversion-first site in under three weeks. Brilliant communication and zero headaches.",
       name: "Charlie Harris",
       designation: "CEO",
       company: "Green Pillar",
@@ -208,55 +214,123 @@ import {
       name: "George Peaurt",
       designation: "Founder",
       company: "Dub Mantra",
-      image: "https://github.com/AlfieHarris10/AlfieHarris-Portfolio/blob/main/dubmantra.jpeg",
+      image: dubmantra,
     },
   ];
   
   const projects = [
+        {
+      name: "Clinic Waitlist Site",
+      description:
+        "Custom designed and coded website for Indra Clinic, a luxury wellness clinic based in London. The website features bespoke graphics and smooth animations.",
+      tags: [
+        {
+          name: "webdesign",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "branding",
+          color: "green-text-gradient",
+        },
+        {
+          name: "customcode",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: indra,
+      source_code_link: "https://indra.clinic/",
+    },
+     {
+      name: "Eligibility Questionnaire",
+      description:
+        "I built a fully custom, brand-aligned eligibility for that guides visitors through a 90-second interactive test to check whether they qualify for treatment at Indra Clinic.",
+      tags: [
+        {
+          name: "webdesign",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "customapps",
+          color: "green-text-gradient",
+        },
+        {
+          name: "frontend",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: eligibility,
+      source_code_link: "https://eligibility.indra.clinic/",
+    },
+     
     {
-      name: "3D Portfolio",
+      name: "Meditation Visualiser",
+      description:
+        "I developed a purpose-built, brand-aligned meditation landing page at that delivers a calm, accessible experience for users seeking mindful support.",
+      tags: [
+        {
+          name: "customapps",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "AV",
+          color: "green-text-gradient",
+        },
+        {
+          name: "visualiser",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: indravisualiser,
+      source_code_link: "https://meditations.indra.clinic/",
+    },
+
+      {
+      name: "Datametrics",
+      description:
+        "Designed and devleoped branding and website for Datametrics, a growing enterprise in the network cabling industry.",
+      tags: [
+        {
+          name: "three",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "javascript",
+          color: "green-text-gradient",
+        },
+        {
+          name: "game",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: datametrics,
+      source_code_link: "https://datametrics-hosting.framer.website/",
+    },
+
+    {
+      name: "HARISU Portfolio",
       description:
        "This interactive 3D web portfolio was coded from scratch using the React.js framework in combination with Tailwind.css, Three.js and various other libraries.",
       tags: [
         {
-          name: "react",
+          name: "webdesign",
           color: "blue-text-gradient",
         },
         {
-          name: "three",
+          name: "portfolio",
           color: "green-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "creative",
           color: "pink-text-gradient",
         },
       ],
-      image: portfolio,
-      source_code_link: "https://github.com/",
+      image: harisu,
+      source_code_link: "https://harisu.framer.website/",
     },
+
+  
     {
-      name: "Cube Dodger",
-      description:
-        "My first ever Three.js project. This introduced me to the idea of combining 2D and 3D elements and then implementing materials, geometry and light sources.",
-      tags: [
-        {
-          name: "gamedesign",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "three",
-          color: "green-text-gradient",
-        },
-        {
-          name: "HTML",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: cubedodger,
-      source_code_link: "https://alfieharris10.github.io/Cube-Dodger/",
-    },
-    {
-      name: "3D Audio Visualiser w/ Shaders",
+      name: "3D Audio Visualiser with shaders",
       description:
         "An online audio visualiser that brings your music to life using 3D elements and shaders. ",
       tags: [
@@ -276,6 +350,7 @@ import {
       image: visualiser,
       source_code_link: "https://alfieharris10.github.io/3D-Audio-Visualiser-Final/",
     },
+   
   ];
   
   export { services, technologies, experiences, testimonials, projects };

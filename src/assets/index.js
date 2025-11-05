@@ -39,9 +39,15 @@ import konvert from "./konvert.jpg";
 import portfolio from "./portfolio.jpg";
 import playbutton from "./playbutton.png";
 import cubedodger from "./cubedodger.jpg";
+import indra from "./Indrarecording.mp4"
 import mack from "./mack.jpeg";
 import waitrose from"./waitroselogo.png";
 import dubmantra from"./dubmantra.jpeg";
+import datametrics from"./example.png";
+import datametricsvid from"./datametricsvid.mp4";
+import eligibility from"./eligibility.png";
+import indravisualiser from"./indravisualiser.png";
+import harisu from"./harisu.png";
 
 
 export {
@@ -86,4 +92,10 @@ export {
   mack,
   waitrose,
   dubmantra,
+  indra,
+  datametrics,
+  datametricsvid,
+  eligibility,
+  indravisualiser,
+  harisu,
 };
