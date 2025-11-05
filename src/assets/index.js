@@ -43,7 +43,7 @@ import indra from "./Indrarecording.mp4"
 import mack from "./mack.jpeg";
 import waitrose from"./waitroselogo.png";
 import dubmantra from"./dubmantra.jpeg";
-import datametrics from"./example.png";
+import datametrics from"./Datametrics.png";
 import datametricsvid from"./datametricsvid.mp4";
 import eligibility from"./eligibility.png";
 import indravisualiser from"./indravisualiser.png";
