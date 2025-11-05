@@ -44,8 +44,8 @@ import mack from "./mack.jpeg";
 import waitrose from"./waitroselogo.png";
 import dubmantra from"./dubmantra.jpeg";
 import datametrics from"./Datametrics.png";
-import eligibility from"./eligibility.png";
-import indravisualiser from"./indravisualiser.png";
+import eligibility from"./Eligibility.png";
+import indravisualiser from"./Indravisualiser.png";
 import harisu from"./harisu.png";
 
 
