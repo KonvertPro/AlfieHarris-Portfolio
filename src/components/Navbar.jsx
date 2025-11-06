@@ -11,8 +11,8 @@ const Navbar = () => {
 
  return(
  <nav className={`${styles.paddingX} w-full flex 
-    items-center py-5 fixed top-0 z-20 
-    bg-black/30 backdrop-blur-md border-b border-white/10 shadow-[0_2px_20px_rgba(0,0,0,0.25)]`}
+    items-center py-5 fixed top-0 z-50 
+    bg-white/80 backdrop-blur-md border-b border-black/10 shadow-[0_2px_20px_rgba(0,0,0,0.06)]`}
    >
    <div className="w-full flex justify-between 
     items-center max-w-7xl mx-auto">
@@ -24,8 +24,8 @@ const Navbar = () => {
         window.scrollTo(0,0);
       }}
    >
-    <p className="text-white text-[18px] font-bold cursor-pointer flex">
-       Alfie Harris &nbsp;
+    <p className="text-black text-[18px] font-bold cursor-pointer flex">
+       AH &nbsp;
        <span className="sm:block hidden">|&nbsp; Design Portfolio </span></p>
       </Link>
       {/* Right-aligned nav links + socials (desktop) */}
@@ -36,8 +36,8 @@ const Navbar = () => {
               key={link.id}
               className={`px-3 py-2 rounded-lg transition-colors duration-200 ${
                 active === link.title
-                  ? "text-white bg-white/10"
-                  : "text-secondary hover:text-white hover:bg-white/5"
+                  ? "text-black bg-black/10"
+                  : "text-black hover:bg-black/5"
               } text-[16px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
@@ -52,16 +52,16 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="text-secondary hover:text-white transition-colors"
+            className="transition-colors"
           >
-            <img src={github} alt="GitHub" className="w-5 h-5 object-contain" />
+            <img src={github} alt="GitHub" className="w-5 h-5 object-contain invert" />
           </a>
           <a
             href="https://www.linkedin.com/in/alfieharris1/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-secondary hover:text-white transition-colors"
+            className="transition-colors"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -77,17 +77,18 @@ const Navbar = () => {
 
     
 
-   <div className="sm:hidden flex flex-1 justify-end items-center">
+  <div className="sm:hidden flex flex-1 justify-end items-center">
   <img 
   src={toggle ? close: menu}
   alt="menu"
   className="w-[28px] h-[28px]
   object-contain cursor-pointer"
+  style={{ filter: toggle ? 'none' : 'invert(1)' }}
   onClick={() => setToggle(!toggle)}
   />
 
   <div className={`${!toggle ? 'hidden'
-    : 'flex' } p-6 bg-black/80 backdrop-blur-md border border-white/10 absolute top-20 
+    : 'flex' } p-6 bg-white/95 backdrop-blur-md border border-black/10 absolute top-20 
     right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl shadow-lg`}>
 
 <ul className="list-none flex justify-end items-start 
@@ -97,9 +98,9 @@ const Navbar = () => {
     key={link.id}
     className={`${
       active === link.title
-      ? "text-white"
-      : "text-secondary"
-    } font-poppins font-medium cursor-pointer text-[16px] px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-colors`}
+      ? "text-black"
+      : "text-black"
+    } font-poppins font-medium cursor-pointer text-[16px] px-3 py-2 rounded-lg hover:bg-black/5 transition-colors`}
     onClick={() => {
       setToggle(!toggle)
       setActive(link.title)
@@ -118,7 +119,7 @@ const Navbar = () => {
         aria-label="GitHub"
         className="text-secondary hover:text-white transition-colors"
       >
-        <img src={github} alt="GitHub" className="w-6 h-6 object-contain" />
+        <img src={github} alt="GitHub" className="w-6 h-6 object-contain invert" />
       </a>
       <a
         href="https://www.linkedin.com/in/alfieharris1/"

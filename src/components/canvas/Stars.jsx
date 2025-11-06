@@ -1,11 +1,17 @@
-import { useState, useRef, Suspense } from "react";
+import { useMemo, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
 
 const Stars = (props) => {
   const ref = useRef();
-  const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
+  // Ensure positions array length is a multiple of 3 to avoid NaNs in bounding sphere
+  const sphere = useMemo(() => {
+    const isMobile = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(max-width: 640px)').matches;
+    const points = isMobile ? 1500 : 5000; // number of points, not float entries
+    const arr = random.inSphere(new Float32Array(points * 3), { radius: 1.2 });
+    return arr;
+  }, []);
 
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 10;

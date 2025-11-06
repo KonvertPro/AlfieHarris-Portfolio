@@ -36,12 +36,14 @@ const ComputersCanvas = () => {
     const mqXs = window.matchMedia("(max-width: 360px)");
     const mqSm = window.matchMedia("(max-width: 480px)");
     const mqMd = window.matchMedia("(max-width: 640px)");
+    const mqLg = window.matchMedia("(max-width: 1200px)");
 
     const update = () => {
       if (mqXs.matches) return setBp("xs");
       if (mqSm.matches) return setBp("sm");
       if (mqMd.matches) return setBp("md");
-      return setBp("lg");
+      if (mqLg.matches) return setBp("lgMid");
+      return setBp("xl");
     };
 
     update();
@@ -49,11 +51,13 @@ const ComputersCanvas = () => {
     mqXs.addEventListener("change", update);
     mqSm.addEventListener("change", update);
     mqMd.addEventListener("change", update);
+    mqLg.addEventListener("change", update);
 
     return () => {
       mqXs.removeEventListener("change", update);
       mqSm.removeEventListener("change", update);
       mqMd.removeEventListener("change", update);
+      mqLg.removeEventListener("change", update);
     };
   }, []);
 
@@ -65,6 +69,8 @@ const ComputersCanvas = () => {
         return { scale: 0.6, position: [0, -3.15, -1.85], fov: 28 };
       case "md":
         return { scale: 0.68, position: [0, -3.1, -1.7], fov: 26 };
+      case "lgMid":
+        return { scale: 0.6, position: [0, -3.25, -1.5], fov: 26 };
       default:
         return { scale: 0.75, position: [0, -3.25, -1.5], fov: 25 };
     }

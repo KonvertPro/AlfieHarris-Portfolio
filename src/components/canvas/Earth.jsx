@@ -17,11 +17,13 @@ const Earth = () => {
 };
 
 const EarthCanvas = () => {
+  const isMobile = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(max-width: 640px)').matches;
+
   return (
     <Canvas
       shadows
       frameloop='demand'
-      dpr={[1, 2]}
+      dpr={isMobile ? [1, 1] : [1, 2]}
       gl={{ preserveDrawingBuffer: true }}
       camera={{
         fov: 45,

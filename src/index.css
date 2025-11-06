@@ -10,8 +10,33 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
 }
+
+/* Light theme overrides: make background white and text black */
+html, body {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Force commonly used dark backgrounds to white */
+.bg-primary,
+.bg-tertiary,
+.bg-black-100,
+.bg-black-200 {
+  background-color: #ffffff !important;
+}
+
+/* Make any predefined text classes render black for readability on white */
+.text-white,
+.text-white-100,
+.text-secondary {
+  color: #000000 !important;
+}
+
+/* Removed dot-grid background */
+
+/* Removed global background overlays (diagonal bands and dot grid) */
 
 .hash-span {
   margin-top: -100px;
