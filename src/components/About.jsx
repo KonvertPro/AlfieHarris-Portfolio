@@ -55,7 +55,7 @@ const About = () => {
       I'm a skilled web developer with experience in
       creating dynamic and responsive websites using software such as Framer, 
       and libraries such as React.js and Three.js. I also specialise in creating audio visual
-      solutions, either custom coded made within TouchDesigner.
+      solutions, either custom coded, or made within TouchDesigner.
 
     </motion.p>
 

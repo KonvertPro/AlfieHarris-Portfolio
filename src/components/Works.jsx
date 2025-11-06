@@ -95,8 +95,6 @@ const Works =() => {
         >Below is a collection of projects that demonstrate my ability to design and develop purposeful digital experiences.
          Each piece highlights a different aspect of my skill set — from clean, responsive interfaces to functional, user-centred builds. 
          You can view the live demos and explore the source code for each, or browse all my repositories on GitHub.
-          <a 
-          href="https://github.com/AlfieHarris10" target="_blank">github.com/AlfieHarris10</a>
         </motion.p> 
       </div>
       <div className=" mt-20 flex flex-wrap gap-7">

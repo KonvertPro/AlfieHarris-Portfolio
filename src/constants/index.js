@@ -37,7 +37,6 @@ import {
     dubmantra,
     indra,
     datametrics,
-    datametricsvid,
     eligibility,
     indravisualiser,
     harisu,
@@ -210,7 +209,7 @@ import {
       image: "https://randomuser.me/api/portraits/men/3.jpg",
     },
     {
-      testimonial: "Alfie created an amazing logo pack for our Instagram, His creativity and attention to detail truly exceeded expectations.",
+      testimonial: "Alfie has designed and created lots of digital assets for our social media platforms. He plays important role in our the successfulness of our brand expansion.",
       name: "George Peaurt",
       designation: "Founder",
       company: "Dub Mantra",
@@ -220,9 +219,9 @@ import {
   
   const projects = [
         {
-      name: "Clinic Waitlist Site",
+      name: "Indra Waitlist Site",
       description:
-        "Custom designed and coded website for Indra Clinic, a luxury wellness clinic based in London. The website features bespoke graphics and smooth animations.",
+        "Custom designed and coded website for Indra Clinic, a luxury wellness clinic based in London. Full launch, large scale website is cunrrently in WIP stage.",
       tags: [
         {
           name: "webdesign",
@@ -287,7 +286,7 @@ import {
       {
       name: "Datametrics",
       description:
-        "Designed and devleoped branding and website for Datametrics, a growing enterprise in the network cabling industry.",
+        "Designed and devleoped branding and a large scale website for Datametrics, a growing enterprise in the network cabling industry.",
       tags: [
         {
           name: "three",
@@ -309,7 +308,7 @@ import {
     {
       name: "HARISU Portfolio",
       description:
-       "This interactive 3D web portfolio was coded from scratch using the React.js framework in combination with Tailwind.css, Three.js and various other libraries.",
+       "A personal DJ portfolio website built using Framer. Showcasing experience & information with a sleek, modern aesthetic.",
       tags: [
         {
           name: "webdesign",
