@@ -161,8 +161,9 @@ import {
       date: "Nov 2023 - Present",
       points: [
         "Dub Mantra is a music group/label that offers a platform for creatives and audiences to collaborate and connect both online and at live events.",
-        "I collaborate with the team to design and create digital content for the brand's social media.",
-        "I play a role in organising and marketing our own live events across the UK",
+        "Collaborated with the team to design and create digital content for the brand's social media.",
+        "Play a role in organising and marketing our own live events across the UK",
+        "Design and deploy live audio-visual shows to accompany DJ sets.",
         "A resident DJ with experience playing live across the world, from the UK to Europe and Asia.",
       ],
     },
@@ -232,7 +233,7 @@ import {
      {
       name: "Eligibility Questionnaire",
       description:
-        "I built a fully custom, brand-aligned eligibility for that guides visitors through a 90-second interactive test to check whether they qualify for treatment at Indra Clinic.",
+        "I built a fully custom, brand-aligned eligibility form that guides visitors through a 90-second interactive test to check whether they qualify for treatment at Indra Clinic.",
       tags: [
         {
           name: "webdesign",

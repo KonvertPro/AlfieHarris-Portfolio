@@ -33,10 +33,10 @@ const GlobalBackground = () => {
         x: Math.random() * w,
         y: Math.random() * h,
         r: Math.random() * 140 + 140,
-        vx: (Math.random() * 0.35 + 0.15) * (Math.random() < 0.5 ? -1 : 1),
-        vy: (Math.random() * 0.35 + 0.15) * (Math.random() < 0.5 ? -1 : 1),
+        vx: (Math.random() * 0.8 + 0.4) * (Math.random() < 0.5 ? -1 : 1),
+        vy: (Math.random() * 0.8 + 0.4) * (Math.random() < 0.5 ? -1 : 1),
         shade: Math.max(120, Math.min(240, base + Math.floor((Math.random() - 0.5) * 60))),
-        alpha: Math.random() * 0.18 + 0.12,
+        alpha: Math.random() * 0.25 + 0.25,
       }));
     };
 
